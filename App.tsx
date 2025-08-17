@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Note } from './types';
-import NoteList from './components/NoteList.tsx';
-import Editor from './components/Editor.tsx';
+import NoteList from './NoteList.tsx';
+import Editor from './Editor.tsx';
 import { useLocalStorage } from './hooks/useLocalStorage';
 
 const MIN_SIDEBAR_WIDTH = 256; // 16rem
