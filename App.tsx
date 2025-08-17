@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Note } from './types';
 import NoteList from './NoteList.tsx';
 import Editor from './Editor.tsx';
-import { useLocalStorage } from './hooks/useLocalStorage';
+import { useLocalStorage } from './useLocalStorage';
 
 const MIN_SIDEBAR_WIDTH = 256; // 16rem
 const MAX_SIDEBAR_WIDTH = 640; // 40rem

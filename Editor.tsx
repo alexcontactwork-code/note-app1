@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Note } from '../types';
 import { Trash, CheckSquare, Table as TableIcon, TextIncrease, TextDecrease, PlusSquare, Notebook, Download } from './Icons';
-import { useDebounce } from '../hooks/useDebounce';
+import { useDebounce } from './useDebounce';
 import TableComponent from './Table';
 
 interface EditorProps {
