@@ -1,0 +1,5 @@
+{
+  "name": "Laptop Notes",
+  "description": "A simple and elegant notes application designed for laptops, inspired by the classic iPhone notes app. Create, edit, and manage your notes with a clean, distraction-free interface. All your data is stored locally in your browser.",
+  "requestFramePermissions": []
+}

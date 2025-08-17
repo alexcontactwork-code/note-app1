@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNGRUY2QTgiLz48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMTAiIGZpbGw9IiM1OTQ5M0YiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9IndoaXRlLXNwYWNlOiBwcmUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI2IiBmb250LXdlaWdodD0iYm9sZCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjYuNSIgeT0iNy41Ij5OT1RFUzwvdHNwYW4+PC90ZXh0PjxsaW5lIHkxPSIxMi41IiB4Mj0iMzIiIHkyPSIxMi41IiBzdHJva2U9IiNFMUUxRTEiIHN0cm9rZS13aWR0aD0iMC41Ii8+PGxpbmUgeTE9IjE1LjUiIHgyPSIzMiIgeTI9IjE1LjUiIHN0cm9rZT0iI0UxRTFFMSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz48bGluZSB5MT0iMTguNSIgeDI9IjMyIiB5Mj0iMTguNSIgc3Ryb2tlPSIjRTFFMUUxIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxsaW5lIHkxPSIyMS41IiB4Mj0iMzIiIHkyPSIxMS41IiBzdHJva2U9IiNFMUUxRTEiIHN0cm9rZS13aWR0aD0iMC41Ii8+PGxpbmUgeTE9IjI0LjUiIHgyPSIzMiIgeTI9IjI0LjUiIHN0cm9rZT0iI0UxRTFFMSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz48bGluZSB5MT0iMjcuNSIgeDI9IjMyIiB5Mj0iMjcuNSIgc3Ryb2tlPSIjRTFFMUUxIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxsaW5lIHkxPSIzMC41IiB4Mj0iMzIiIHkyPSIzMC41IiBzdHJva2U9IiNFMUUxRTEiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.1.1",
+    "react-dom/client": "https://esm.sh/react-dom@19.1.1/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/"
+  }
+}
+</script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+      }
+      .animate-fade-out {
+        animation: fadeOut 0.3s ease-out forwards;
+      }
+
+      @keyframes jiggle {
+        0%, 100% { transform: rotate(-2deg); }
+        50% { transform: rotate(2deg); }
+      }
+      .animate-jiggle {
+        animation: jiggle 0.3s infinite;
+      }
+
+      @keyframes popIn {
+        0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+        80% { opacity: 1; transform: scale(1.05) translateY(-5px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .animate-pop-in {
+        animation: popIn 0.5s ease-out forwards;
+      }
+
+      @keyframes slideInFromLeft {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .animate-slide-in-from-left {
+        animation: slideInFromLeft 0.5s ease-out forwards;
+      }
+
+      @keyframes slideInFromRight {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .animate-slide-in-from-right {
+        animation: slideInFromRight 0.5s ease-out forwards;
+      }
+
+      @keyframes backgroundPan {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-background-pan {
+        background-size: 200% 200%;
+        animation: backgroundPan 3s linear infinite;
+      }
+      
+      @keyframes shimmer {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+      .animate-shimmer {
+        animation: shimmer 2s ease-in-out infinite;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(160, 160, 160, 0.5);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+       ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(160, 160, 160, 0.8);
+      }
+
+      /* Placeholder for contentEditable */
+      [contenteditable="true"]:empty::before {
+        content: attr(data-placeholder);
+        pointer-events: none;
+        display: block;
+        color: rgba(161, 161, 170, 0.8);
+      }
+
+      .dark [contenteditable="true"]:empty::before {
+        color: rgba(113, 113, 122, 0.8);
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white dark:bg-zinc-900 overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
